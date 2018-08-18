@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
-source "/usr/bin/rvm"
+. "/usr/bin/rvm"
 
 rvm use 2.5 && bundle install
 '''
