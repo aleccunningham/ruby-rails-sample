@@ -3,7 +3,11 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh '''rvm use 2.5 && bundle install
+        sh '''#!/bin/bash
+
+source "/usr/bin/rvm"
+
+rvm use 2.5 && bundle install
 '''
       }
     }
