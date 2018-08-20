@@ -4,7 +4,7 @@ pipeline {
     stage('Install') {
       steps {
         sh '''#!/bin/bash
-rvm use 2.2.4
+source ~/.rvm/scripts/rvm && rvm use --install --create ruby-2.2.4 && export > rvm.env
 bundle install
 '''
       }
